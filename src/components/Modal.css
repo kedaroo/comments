@@ -1,0 +1,33 @@
+.modal-backdrop {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+}
+
+.modal {
+    color: black;
+    margin: 2rem auto;
+    width: 80%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.modal h3 {
+    /* text-align: center; */
+}
+
+.modal p {
+    font-size: 1.3rem;
+    text-align: start;
+}
+
+.modal button {
+    padding: 0.6em 2em;
+    border: 2px solid #c23866;
+    color: black;
+}

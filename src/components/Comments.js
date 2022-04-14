@@ -6,7 +6,7 @@ import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
 import './Comments.css'
 
-export default function Comments() {
+export default function Comments({ displayName }) {
     const [newComment, setNewComment] = useState('')
     const { addDocument } = useFirestore('comments')
     const { documents, error } = useCollection('comments')
@@ -14,7 +14,7 @@ export default function Comments() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         const commentToAdd = {
-            displayName: 'user',
+            displayName,
             // photoURL: null,
             createdAt: Timestamp.fromDate(new Date()),
             content: newComment,
